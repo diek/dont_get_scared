@@ -17,3 +17,9 @@ for jogo in resp.json():
 # resp = urllib.request.urlopen('http://worldcup.sfg.io/matches').read()
 # for jogo in json.loads(resp.decode('utf-8')):
 #     if jogo['status'] == 'completed':
+
+sudo mv git-credential-osxkeychain \
+"$(dirname $(which git))/git-credential-osxkeychain"
+# Move the helper to the path where git is installed
+# Password:
+
