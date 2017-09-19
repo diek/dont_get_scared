@@ -3,13 +3,14 @@ def is_valid_int(test_value):
 
     tests input for a int, returns true if integer, otherwise False.
     '''
-
-    try:
+    check = isinstance(test_value, int)
+    return(check)
+    """ try:
         int(test_value)
         return True
 
     except ValueError:
-        return False
+        return False """
 
 
 def small_large():
@@ -29,12 +30,12 @@ def small_large():
     flag1 = 1
     first_rec = 1
     while (flag1):
-        num = raw_input("Enter a number: ")
+        num = input("Enter a number: ")
 
         if num == "done":
             flag1 = 0
         else:
-            cond1 = is_valid_int(num)
+            cond1 = is_valid_int(int(num))
             if first_rec and cond1:
                 ## initialize with first value input
                 smallest = int(num)
@@ -48,12 +49,12 @@ def small_large():
                 elif num > largest:
                     largest = num
                 else:
-                    print 'Invalid input'
+                    print('Invalid input')
             else:
-                print 'Invalid input'
-    return[largest, smallest]
+                print('Invalid input')
+    return([largest, smallest])
 
 # Make the call
 result_set = small_large()
-print "Maximum is ", result_set[0]
-print "Minimum is ", result_set[1]
+print("Maximum is ", result_set[0])
+print("Minimum is ", result_set[1])
